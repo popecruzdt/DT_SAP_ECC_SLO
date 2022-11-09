@@ -1,0 +1,4 @@
+my-environment:
+    - name: "my-environment"
+    - env-url: "https://abc123.live.dynatrace.com"
+    - env-token-name: "MY_ENVIRONMENT_TOKEN"
