@@ -11,8 +11,12 @@ This is a configuration template to create and manage Dynatrace SLO using Monaco
     * https://www.dynatrace.com/hub/detail/sap-abap/overview/?query=sap
 
 ## Deployment Steps:
-### Manually define user-session custom metrics
-  * Metric Name: `uscm.sap_gui_modules_<sap_module_name>_sessions`
+### Manually define user-session custom metrics, one for each SAP module
+  * Metric Key: `uscm.sap_gui_modules_<sap_module_name>_sessions`
+  * Value type to be extracted: `User session counter`
+  * Dimension 1: `userExperienceScore`
+  * Dimension 2: `useraction.application`
+  * Filter 1: `useraction.name` *LIKE* `SAP Module Name*`
 
 ### Prepare Monaco:
 #### Download/Install Monaco:
