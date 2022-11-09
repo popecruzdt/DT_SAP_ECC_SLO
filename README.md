@@ -9,6 +9,8 @@ This is a configuration template to create and manage Dynatrace SLO using Monaco
 ## Prerequisites:
   * SAP ECC (ABAP) Instance monitored with SAP Application Server Extension
     * https://www.dynatrace.com/hub/detail/sap-abap/overview/?query=sap
+  * SAP GUI Custom Application
+  * Management Zone containing the SAP GUI Custom Application
 
 ## Deployment Steps:
 ### Manually define user-session custom metrics, one for each SAP module
@@ -29,6 +31,8 @@ This is a configuration template to create and manage Dynatrace SLO using Monaco
   * Plant Maintenance
   * Production Planning
   * System
+
+For more information, check the `_slo.yaml` file contents to match naming definitions.
 
 ### Prepare Monaco:
 #### Download/Install Monaco:
