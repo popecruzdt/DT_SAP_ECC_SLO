@@ -15,7 +15,7 @@ config:
   - APP_NAME_GUI_Modules_System_SatisfiedUX: "_slo.json"
 
 APP_NAME_GUI_SatisfiedT-Codes:
-  - name: "SAP QN1 GUI Satisfied T-Codes"
+  - name: "SAP APP_NAME GUI Satisfied T-Codes"
   - description: "Overall SAP GUI user satisfaction, the percentage of satisfied t-code user actions"
   - metricExpression: "(100)*(builtin:apps.other.uaCount.osAndApdex:filter(and(eq(Apdex category,SATISFIED))):splitBy())/(builtin:apps.other.uaCount.osAndApdex:splitBy())"
   - filter: "type(CUSTOM_APPLICATION),entityName(APP_NAME),mzName(APP_NAME)"
@@ -24,7 +24,7 @@ APP_NAME_GUI_SatisfiedT-Codes:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_CrashFreeUserSessions:
-  - name: "SAP QN1 GUI Crash Free User Sessions"
+  - name: "SAP APP_NAME GUI Crash Free User Sessions"
   - description: "SAP GUI User Sessions without Crashes"
   - metricExpression: "builtin:apps.other.crashFreeUsersRate.os:splitBy():avg"
   - filter: "type(CUSTOM_APPLICATION),entityName(APP_NAME),mzName(APP_NAME)"
@@ -33,7 +33,7 @@ APP_NAME_GUI_CrashFreeUserSessions:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_SuccessfulT-Codes:
-  - name: "SAP QN1 GUI Successful T-Codes"
+  - name: "SAP APP_NAME GUI Successful T-Codes"
   - description: "SAP GUI T-Code User Actions without Errors"
   - metricExpression: "100*((builtin:apps.other.uaCount.osAndVersion:splitBy():sum)-(builtin:apps.other.reportedErrorCount.osAndVersion:splitBy():sum))/(builtin:apps.other.uaCount.osAndVersion:splitBy():sum)"
   - filter: "type(CUSTOM_APPLICATION),entityName(APP_NAME),mzName(APP_NAME)"
@@ -42,7 +42,7 @@ APP_NAME_GUI_SuccessfulT-Codes:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_SessionManagerSatisfiedT-Codes:
-  - name: "SAP QN1 GUI Session Manager Satisfied T-Codes"
+  - name: "SAP APP_NAME GUI Session Manager Satisfied T-Codes"
   - description: "Session Manager SAP GUI user satisfaction, the percentage of satisfied t-code user actions"
   - metricExpression: "(100)*(builtin:apps.other.keyUserActions.count.osAndApdex:filter(eq(Apdex category,SATISFIED)):splitBy():sum)/(builtin:apps.other.keyUserActions.count.osAndApdex:splitBy():sum)"
   - filter: "type(device_application_method),mzName(APP_NAME),entityName(SESSION_MANAGER)"
@@ -51,7 +51,7 @@ APP_NAME_GUI_SessionManagerSatisfiedT-Codes:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_CustomerRelationshipManagement_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Customer Relationship Management Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Customer Relationship Management Satisfied UX"
   - description: "Modules Customer Relationship Management SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_customer_relationship_management_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_customer_relationship_management_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -60,7 +60,7 @@ APP_NAME_GUI_Modules_CustomerRelationshipManagement_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_CrossApplicationBasisComponents_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Cross Application Basis Components Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Cross Application Basis Components Satisfied UX"
   - description: "Modules Cross Application Basis Components SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_cross_application_basis_components_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_cross_application_basis_components_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -69,7 +69,7 @@ APP_NAME_GUI_Modules_CrossApplicationBasisComponents_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_FinancialAccounting_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Financial Accounting Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Financial Accounting Satisfied UX"
   - description: "Modules Financial Accounting SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_financial_accounting_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_financial_accounting_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -78,7 +78,7 @@ APP_NAME_GUI_Modules_FinancialAccounting_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_Financials_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Financials Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Financials Satisfied UX"
   - description: "Modules Financials SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_financials_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_financials_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -87,7 +87,7 @@ APP_NAME_GUI_Modules_Financials_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_LogisticsExecution_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Logistics Execution Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Logistics Execution Satisfied UX"
   - description: "Modules Logistics Execution SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_logistics_execution_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_logistics_execution_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -96,7 +96,7 @@ APP_NAME_GUI_Modules_LogisticsExecution_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_MaterialsManagement_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Materials Management Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Materials Management Satisfied UX"
   - description: "Modules Materials Management SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_materials_management_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_materials_management_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -105,7 +105,7 @@ APP_NAME_GUI_Modules_MaterialsManagement_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_SalesAndDistribution_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Sales And Distribution Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Sales And Distribution Satisfied UX"
   - description: "Modules Sales And Distribution SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_sales_and_distribution_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_sales_and_distribution_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -114,7 +114,7 @@ APP_NAME_GUI_Modules_SalesAndDistribution_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_PlantMaintenance_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Plant Maintenance Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Plant Maintenance Satisfied UX"
   - description: "Modules Plant Maintenance SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_plant_maintenance_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_plant_maintenance_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -123,7 +123,7 @@ APP_NAME_GUI_Modules_PlantMaintenance_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_ProductionPlanning_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules Production Planning Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules Production Planning Satisfied UX"
   - description: "Modules Production Planning SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_production_planning_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_production_planning_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
@@ -132,7 +132,7 @@ APP_NAME_GUI_Modules_ProductionPlanning_SatisfiedUX:
   - timeframe: "now/w to +1w/w"
 
 APP_NAME_GUI_Modules_System_SatisfiedUX:
-  - name: "SAP QN1 GUI Modules System Satisfied UX"
+  - name: "SAP APP_NAME GUI Modules System Satisfied UX"
   - description: "Modules System SAP GUI user satisfaction, the percentage of satisfied user sessions"
   - metricExpression: "100*(uscm.sap_gui_modules_system_sessions:filter(and(eq(userExperienceScore,SATISFIED),eq(useraction.application,APP_NAME))):splitBy():sum)/(uscm.sap_gui_modules_system_sessions:filter(and(eq(useraction.application,APP_NAME))):splitBy():sum)"
   - filter: ""
