@@ -18,6 +18,18 @@ This is a configuration template to create and manage Dynatrace SLO using Monaco
   * Dimension 2: `useraction.application`
   * Filter 1: `useraction.name` *LIKE* `SAP Module Name*`
 
+#### SAP Modules:
+  * Customer Relationship Management
+  * Cross Application Basis Components
+  * Financial Accounting
+  * Financials
+  * Logistics Execution
+  * Materials Management
+  * Sales And Distribution
+  * Plant Maintenance
+  * Production Planning
+  * System
+
 ### Prepare Monaco:
 #### Download/Install Monaco:
   * https://dynatrace-oss.github.io/dynatrace-monitoring-as-code/Get-started/installation
@@ -31,13 +43,13 @@ This is a configuration template to create and manage Dynatrace SLO using Monaco
   * Linux/MacOS: `export TOKEN_VAR_NAME=dt0c01.*`
   * Windows: `set TOKEN_VAR_NAME=dt0c01.*`
 
-### Modify Projects
-#### Create new project for SAP application
+### Modify Projects:
+#### Create new project for SAP application:
   * Duplicate/clone `APP_NAME` directory
   * Rename copy of `APP_NAME` directory to the name of the SAP application (avoid spaces)
   * Find and replace `APP_NAME` in all yaml files with the name of the SAP application (avoid spaces)
 
-### Deploy Project
+### Deploy Project:
 ```
  monaco -e=environments.yaml -p=projects/SAP_ECC/YOUR_APP_NAME
 ```
