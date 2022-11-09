@@ -1,7 +1,7 @@
 # DT_SAP_ECC_SLO
 Dynatrace SLO management using Monaco for SAP ECC
 
-![Screenshot](https://raw.githubusercontent.com/popecruzdt/DT_SAP_ECC_SLO/main/screenshots/DT_SAP_ECC_SLO_Diagram.png)
+![Screenshot](https://raw.githubusercontent.com/popecruzdt/DT_SAP_ECC_SLO/main/DT_SAP_ECC_SLO_Diagram.png)
 
 ## Summary:
 This is a configuration template to create and manage Dynatrace SLO using Monaco for SAP ECC applications.
