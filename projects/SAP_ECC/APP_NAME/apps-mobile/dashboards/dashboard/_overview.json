@@ -1,0 +1,506 @@
+{
+ "dashboardMetadata": {
+  "dashboardFilter": {
+   "managementZone": null,
+   "timeframe": "{{ .timeframe }}"
+  },
+  "hasConsistentColors": false,
+  "name": "{{ .application_name }} Service Level Objectives",
+  "owner": "{{ .owner }}",
+  "popularity": 7,
+  "shared": false,
+  "tags": [
+   "SAP ECC",
+   "{{ .application_name }}",
+   "SLO"
+  ],
+  "preset": true,
+  "tilesNameSize": null
+ },
+ "metadata": {
+  "clusterVersion": "1.249.131.20220901-082152",
+  "configurationVersions": [
+   6
+  ]
+ },
+ "tiles": [
+  {
+   "assignedEntities": [
+    "{{ .satisfied_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 0,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .satisfied_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .successful_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 0,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .successful_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .crash_free_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 0,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .crash_free_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_cross_application_basis_components_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 342,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_cross_application_basis_components_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_customer_relationship_management_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 342,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_customer_relationship_management_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_financial_accounting_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 342,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_financial_accounting_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_financials_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 684,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_financials_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_logistics_execution_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 684,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_logistics_execution_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_materials_management_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 684,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_materials_management_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_sales_and_distribution_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 1026,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_sales_and_distribution_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_plant_maintenance_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 1026,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_plant_maintenance_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "assignedEntities": [
+    "{{ .module_production_planning_slo_id }}"
+   ],
+   "bounds": {
+    "height": 152,
+    "left": 1026,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "metric": "METRICS=true;LEGEND=true;PROBLEMS=true;decimals=3;customTitle={{ .module_production_planning_slo_name }};",
+   "name": "Service-level objective",
+   "nameSize": "small",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "SLO"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 0,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "### Overall User Satisfaction",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 342,
+    "top": 0,
+    "width": 988
+   },
+   "configured": true,
+   "markdown": "### SAP Module User Satisfaction",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 190,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .satisfied_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 380,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_customer_relationship_management_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 380,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .successful_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 570,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .crash_free_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 190,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_cross_application_basis_components_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 570,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_financial_accounting_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 836,
+    "top": 190,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_financials_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 836,
+    "top": 380,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_logistics_execution_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 836,
+    "top": 570,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_materials_management_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1178,
+    "top": 190,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_plant_maintenance_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1178,
+    "top": 380,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_production_planning_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1178,
+    "top": 570,
+    "width": 152
+   },
+   "configured": true,
+   "markdown": "### ↘️ [Analyze](#dashboard;id={{ .module_sales_and_distribution_dashboard_id }})",
+   "name": "Markdown",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  }
+ ]
+}

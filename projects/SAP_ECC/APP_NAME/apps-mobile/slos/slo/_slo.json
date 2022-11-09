@@ -1,0 +1,16 @@
+{
+ "enabled": true,
+ "name": "{{ .name }}",
+ "description": "{{ .description }}",
+ "metricExpression": "{{ .metricExpression }}",
+ "filter": "{{ .filter }}",
+ "warning": {{ .warning }},
+ "target": {{ .target }},
+ "timeframe": "{{ .timeframe }}",
+ "useRateMetric": true,
+ "error": "NONE",
+ "evaluationType": "AGGREGATE",
+ "metricDenominator": "",
+ "metricNumerator": "",
+ "metricRate": ""
+}
